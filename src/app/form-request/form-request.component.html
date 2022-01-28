@@ -1,0 +1,36 @@
+<div class="main-form">
+    <span>Hi mate, for geting info about programer, push his name to this form</span>
+    <input type="text" [formControl]="userNameControl">
+    <button (click)="goRequest(userNameControl.value)">get result</button>
+
+    <tbody *ngIf="user!==null">
+        <tr>
+            <td>login</td>
+            <td>{{user.login}}</td>
+        </tr>
+        <tr>
+            <td>id</td>
+            <td>{{user.id}}</td>
+        </tr>
+        <tr>
+            <td>avatar</td>
+            <td><img [src]="user.avatar_url" width="100px" height="100px"></td>
+        </tr>
+        <tr>
+            <td>Name</td>
+            <td>{{user.name}}</td>
+        </tr>
+        <tr>
+            <td>company</td>
+            <td>{{user.company}}</td>
+        </tr>
+        <tr>
+            <td>email</td>
+            <td>{{user.email}}</td>
+        </tr>
+        <tr>
+            <td>twitter username</td>
+            <td>{{user.twitter_username}}</td>
+        </tr>
+    </tbody>
+</div>
